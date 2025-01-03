@@ -15,8 +15,10 @@ store.dispatch(addTodo("Go out for 2 hours"));
 console.log("State after adding second todo", store.getState());
 store.dispatch(addTodo("Stay out for 2 hours"));
 console.log("State after adding third todo", store.getState());
-const action = deleteTodo(2);
-console.log("Dispatching action:", action);
+/*const action = deleteTodo(2);
+console.log("Dispatching action:", action);*/
+store.dispatch(deleteTodo(2));
+console.log("State after deleting second todo", store.getState());
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
